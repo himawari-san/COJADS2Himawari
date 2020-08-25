@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<setting>
+  <corpora dppath="Corpora/COJADS" name="日本語諸方言コーパス(COJADS)">
+    <li name="COJADS" path="Corpora/COJADS/corpus"/>
+  </corpora>
+
+  <!-- 索引関連 -->
+  <!-- 要素内容への索引 -->
+  <index_cix>
+    <li field_name="キー" label="標準語" middle_name="standard" name="standard" type="normal"/>
+    <li field_name="キー" label="方言" middle_name="dialect" name="dialect" type="normal"/>
+    <li field_name="キー" label="標準語(正規表現)" middle_name="standard2" name="standard" type="null"/>
+    <li field_name="キー" label="方言(正規表現)" middle_name="dialect2" name="dialect" type="null"/>
+  </index_cix>
+
+  <!-- 要素への索引 -->
+  <index_eix>
+    <li is_empty="false" middle_name="corpus" name="コーパス" top="true"/>
+    <li isBrowsed="true" is_empty="false" middle_name="article" name="記事"/>    <li is_empty="false" middle_name="utterance" name="utterance"/>
+    <li is_empty="false" middle_name="standard" name="standard"/>
+    <li is_empty="false" middle_name="dialect" name="dialect"/>
+  </index_eix>
+
+  <!-- 要素属性への索引 -->
+  <index_aix>
+  </index_aix>
+
+<!-- 検索関連オプション -->
+  <!-- KWIC の文脈長 -->
+  <length_context_kwic value="10"/>
+  <!-- 検索時の文脈マッチング範囲 -->
+  <length_context_search value="10"/>
+
+  <!-- 結果レコードのフィールド定義 -->
+  <field_setting>
+    <li align="RIGHT" name="no" type="index" width="30"/>
+    <li align="RIGHT" attribute="_preceding_context" element="_sys" name="前文脈" sort_direction="R" type="preceding_context" width="180"/>
+    <li attribute="_key" element="_sys" name="キー" sort_order="1" type="key" width="80"/>
+    <li attribute="_following_context" element="_sys" name="後文脈" sort_order="2" type="following_context" width="160"/>
+    <li attribute="xmin" element="utterance" name="xmin" type="argument" width="80"/>
+    <li attribute="xmax" element="utterance" name="xmax" type="argument" width="80"/>
+    <li attribute="ken" element="utterance" name="県" type="argument" width="80"/>
+    <li attribute="chiten" element="utterance" name="地点" type="argument" width="80"/>
+    <li attribute="file_bango" element="utterance" name="file番号" type="argument" width="80"/>
+    <li attribute="chiten_id" element="utterance" name="地点ID" type="argument" width="80"/>
+    <li attribute="id" element="utterance" name="ID" type="argument" width="80"/>
+    <li attribute="washa" element="utterance" name="話者" type="argument" width="80"/>
+    <li attribute="hogen_text" element="utterance" name="方言テキスト" type="argument" width="80"/>
+    <li attribute="hyojungo_text" element="utterance" name="標準語テキスト" type="argument" width="80"/>
+    <li attribute="data_mei" element="utterance" name="データ名" type="argument" width="80"/>
+    <li attribute="shuroku_nen" element="utterance" name="収録年月日" type="argument" width="80"/>
+    <li attribute="shuroku_basho" element="utterance" name="収録場所" type="argument" width="80"/>
+    <li attribute="henshu_tantosha" element="utterance" name="編集担当者" type="argument" width="80"/>
+    <li attribute="washa_seinen" element="utterance" name="話者生年" type="argument" width="80"/>
+    <li attribute="washa_nenrei" element="utterance" name="話者年齢" type="argument" width="80"/>
+    <li attribute="washa_seibetsu" element="utterance" name="話者性別" type="argument" width="80"/>
+    <li attribute="wadai" element="utterance" name="話題" type="argument" width="80"/>
+    <li attribute="shuroku_tantosha" element="utterance" name="収録担当者" type="argument" width="80"/>
+    <li attribute="danwa_genre" element="utterance" name="談話ジャンル" type="argument" width="80"/>
+    <li attribute="chu1_bango" element="utterance" name="注1番号" type="argument" width="80"/>
+    <li attribute="chu1_gokei" element="utterance" name="注1語形" type="argument" width="80"/>
+    <li attribute="chu1_chushaku" element="utterance" name="注1注釈" type="argument" width="80"/>
+    <li attribute="chu2_bango" element="utterance" name="注2番号" type="argument" width="80"/>
+    <li attribute="chu2_gokei" element="utterance" name="注2語形" type="argument" width="80"/>
+    <li attribute="chu2_chushaku" element="utterance" name="注2注釈" type="argument" width="80"/>
+    <li attribute="chu3_bango" element="utterance" name="注3番号" type="argument" width="80"/>
+    <li attribute="chu3_gokei" element="utterance" name="注3語形" type="argument" width="80"/>
+    <li attribute="chu3_chushaku" element="utterance" name="注3注釈" type="argument" width="80"/>
+  </field_setting>
+
+<!--     コーパスフィールド -->
+  <corpus_fields name="コーパス">
+    <li attribute="名前" element="コーパス" name="コーパス名" width="120"/>
+  </corpus_fields>
+
+<!-- 閲覧要素一覧用フィールド -->
+<unit_fields name="タイトル，著者">
+ <li attribute="タイトル" element="記事" name="タイトル" width="120"/>
+ <li attribute="サブタイトル" element="記事" name="サブタイトル" width="120"/>
+ <li attribute="著者" element="記事" name="著者" width="120"/>
+ <li attribute="path" element="記事" name="Path" width="120"/>
+</unit_fields>
+
+<!-- 統計表用フィールド -->
+  <stat_fields_1 label="キー，話者">
+    <li name="キー" width="100"/>
+    <li align="LEFT" name="話者" width="150"/>
+    <li align="RIGHT" name="頻度" sort_type="numeric" width="80"/>
+  </stat_fields_1>
+
+  <stat_fields_2 label="キー">
+    <li name="キー" width="100"/>
+    <li align="RIGHT" name="頻度" sort_type="numeric" width="80"/>
+  </stat_fields_2>
+
+
+<!-- 閲覧表示関連オプション -->
+  <!-- ブラウザ -->
+  <browsers label="記事" temp_file="__searched_tmp.xml">
+    <li name="デフォルトブラウザ"  os="Windows" path="[[default_browser]]" />
+    <li name="Microsoft Internet Explorer" option="/c start iexplore" os="Windows" path="cmd"/>
+    <li name="Firefox(Windows)" option="/c start firefox" os="Windows" path="cmd"/>
+    <li name="Chrome(Windows)" option="/c start chrome" os="Windows" path="cmd"/>
+    <li name="デフォルトブラウザ"  os="Linux" path="[[default_browser]]" />
+    <li name="Firefox(Linux)" os="Linux" path="firefox"/>
+    <li name="Chrome(Linux)" os="Linux" path="chrome"/>
+    <li name="デフォルトブラウザ"  os="Mac" path="[[default_browser]]" />
+    <li name="Safari(Mac)" option="-a safari" os="Mac" path="open"/>
+    <li name="Firefox(Mac)" option="-a firefox" os="Mac" path="open"/>
+    <li name="Chrome(Mac)" option="-n -b com.google.Chrome" os="Mac" path="open"/> 
+  </browsers>
+
+
+  <!-- 表示用 XSL -->
+  <xsl_files root_path="Corpora/COJADS/xslt">
+    <li label="default" name="cojads_sample.xsl"/>
+  </xsl_files>
+
+<!-- 字体辞書の URL -->
+<jitaidic url="Corpora/jitaidic.xml"/>
+
+<!-- マニュアルの URL -->
+  <manual url="https://www2.ninjal.ac.jp/lrc/index.php?%C1%B4%CA%B8%B8%A1%BA%F7%A5%B7%A5%B9%A5%C6%A5%E0%A1%D8%A4%D2%A4%DE%A4%EF%A4%EA%A1%D9/%CD%F8%CD%D1%BC%D4%A5%DE%A5%CB%A5%E5%A5%A2%A5%EB/1_6"/>
+
+<!-- ホームページ URL -->
+  <hp url="https://www2.ninjal.ac.jp/lrc/index.php?%C1%B4%CA%B8%B8%A1%BA%F7%A5%B7%A5%B9%A5%C6%A5%E0%A1%D8%A4%D2%A4%DE%A4%EF%A4%EA%A1%D9"/>
+
+  <!-- フォントサイズ -->
+  <fontsize value="14"/>
+
+
+  <!-- indexing 用のメニュー項目を表示するか否か -->
+  <isIndexingEnable value="true"/>
+
+  <!-- 外部アノテータの設定 ver.1.6から .himawari_annotator_config.xml に移行 -->
+  <!-- インポート時の設定 ver.1.6から .himawari_import_config.xml に移行 -->
+</setting>

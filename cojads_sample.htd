@@ -1,0 +1,4 @@
+## 最初の行を削除
+^xmin.*\n	
+## 残りの行
+(.*?),(.*?),(.*?),(.*?),(.*?),(.*?),(.*?),(.*?),(.*?),(.*?),(.*?),(.*?),(.*?),(.*?),(.*?),(.*?),(.*?),(.*?),(.*?),(.*?),(.*?),(.*?),(.*?),(.*?),(.*?),(.*?),(.*?),(.*?),(.*?)\n	<utterance xmin="$1" xmax="$2" ken="$3" chiten="$4" file_bango="$5" chiten_id="$6" id="$7" washa="$8" hogen_text="$9" hyojungo_text="$10" data_mei="$11" shuroku_nen="$12" shuroku_basho="$13" henshu_tantosha="$14" washa_seinen="$15" washa_nenrei="$16" washa_seibetsu="$17" wadai="$18" shuroku_tantosha="$19" danwa_genre="$20" chu1_bango="$21" chu1_gokei="$22" chu1_chushaku="$23" chu2_bango="$24" chu2_gokei="$25" chu2_chushaku="$26" chu3_bango="$27" chu3_gokei="$28" chu3_chushaku="$29">                    \n<standard>$10</standard>                         \n<dialect>$9</dialect>                    \n</utterance>\n
