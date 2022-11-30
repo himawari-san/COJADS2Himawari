@@ -3,7 +3,6 @@
 
 　公開しているファイルの概要は，次のとおりです。
 
-- cojads_sample.htd  ... 変換規則
-- namae_kakeru.bat ... リネーム用bat（*.csv → *.txt）
-- Package/config_cojads.xml ... 『ひまわり』用設定ファイル
+- Package/config_COJADS.xml ... 『ひまわり』用設定ファイル
+- Package/resources/htd/cojads_sample.htd  ... 変換規則
 - Package/Corpora/COJADS/xslt ... 対話データ全体表示用スタイルシート

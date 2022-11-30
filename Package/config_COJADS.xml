@@ -95,22 +95,6 @@
 
 
 <!-- 閲覧表示関連オプション -->
-  <!-- ブラウザ -->
-  <browsers label="記事" temp_file="__searched_tmp.xml">
-    <li name="デフォルトブラウザ"  os="Windows" path="[[default_browser]]" />
-    <li name="Microsoft Internet Explorer" option="/c start iexplore" os="Windows" path="cmd"/>
-    <li name="Firefox(Windows)" option="/c start firefox" os="Windows" path="cmd"/>
-    <li name="Chrome(Windows)" option="/c start chrome" os="Windows" path="cmd"/>
-    <li name="デフォルトブラウザ"  os="Linux" path="[[default_browser]]" />
-    <li name="Firefox(Linux)" os="Linux" path="firefox"/>
-    <li name="Chrome(Linux)" os="Linux" path="chrome"/>
-    <li name="デフォルトブラウザ"  os="Mac" path="[[default_browser]]" />
-    <li name="Safari(Mac)" option="-a safari" os="Mac" path="open"/>
-    <li name="Firefox(Mac)" option="-a firefox" os="Mac" path="open"/>
-    <li name="Chrome(Mac)" option="-n -b com.google.Chrome" os="Mac" path="open"/> 
-  </browsers>
-
-
   <!-- 表示用 XSL -->
   <xsl_files root_path="Corpora/COJADS/xslt">
     <li label="default" name="cojads_sample.xsl"/>
@@ -119,11 +103,7 @@
 <!-- 字体辞書の URL -->
 <jitaidic url="Corpora/jitaidic.xml"/>
 
-<!-- マニュアルの URL -->
-  <manual url="https://www2.ninjal.ac.jp/lrc/index.php?%C1%B4%CA%B8%B8%A1%BA%F7%A5%B7%A5%B9%A5%C6%A5%E0%A1%D8%A4%D2%A4%DE%A4%EF%A4%EA%A1%D9/%CD%F8%CD%D1%BC%D4%A5%DE%A5%CB%A5%E5%A5%A2%A5%EB/1_6"/>
-
-<!-- ホームページ URL -->
-  <hp url="https://www2.ninjal.ac.jp/lrc/index.php?%C1%B4%CA%B8%B8%A1%BA%F7%A5%B7%A5%B9%A5%C6%A5%E0%A1%D8%A4%D2%A4%DE%A4%EF%A4%EA%A1%D9"/>
+  <package_hp url="https://csd.ninjal.ac.jp/lrc/index.php?%C1%B4%CA%B8%B8%A1%BA%F7%A5%B7%A5%B9%A5%C6%A5%E0%A1%D8%A4%D2%A4%DE%A4%EF%A4%EA%A1%D9/%C6%FC%CB%DC%B8%EC%BD%F4%CA%FD%B8%C0%A5%B3%A1%BC%A5%D1%A5%B9+%28COJADS%29%A4%CECSV%A5%C7%A1%BC%A5%BF%A4%CE%CD%F8%CD%D1" />
 
   <!-- フォントサイズ -->
   <fontsize value="14"/>
